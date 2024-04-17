@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondActivity">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="411dp"
+        android:layout_height="109dp"
+        android:layout_marginBottom="32dp"
+        android:background="#BC7FCD"
+        app:layout_constraintBottom_toTopOf="@+id/txtMainFood"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="點餐"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtMainFood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:text="主食:"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
+
+
+    <TextView
+        android:id="@+id/txtDrink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:text="飲料:"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtMainFood"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/txtMainFood"
+        app:layout_constraintTop_toBottomOf="@+id/txtMainFood" />
+
+    <TextView
+        android:id="@+id/txtDessert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:text="甜點:"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtDrink"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/txtDrink"
+        app:layout_constraintTop_toBottomOf="@+id/txtDrink" />
+
+    <CheckBox
+        android:id="@+id/chbIce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="香草冰淇淋"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtDessert"
+        app:layout_constraintStart_toEndOf="@+id/txtDessert"
+        app:layout_constraintTop_toTopOf="@+id/txtDessert" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:checkedButton="@id/rdbCola"
+        app:layout_constraintStart_toEndOf="@+id/txtDrink"
+        app:layout_constraintTop_toTopOf="@+id/txtDrink">
+
+        <RadioButton
+            android:id="@+id/rdbCola"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="可樂"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/rdbSoda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="雪碧"
+            android:textSize="24sp" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:checkedButton="@id/rdbRice"
+        app:layout_constraintStart_toEndOf="@+id/txtMainFood"
+        app:layout_constraintTop_toTopOf="@+id/txtMainFood">
+
+        <RadioButton
+            android:id="@+id/rdbRice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="時蔬燉飯"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/rdbNoodles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="奶油義大利麵"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/rdbPizza"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="海鮮披薩"
+            android:textSize="24sp" />
+
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/chbCake"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="提拉米蘇"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/chbIce"
+        app:layout_constraintTop_toBottomOf="@+id/chbIce" />
+
+    <TextView
+        android:id="@+id/txtRicePrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="$120"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/radioGroup"
+        app:layout_constraintTop_toTopOf="@+id/radioGroup" />
+
+    <TextView
+        android:id="@+id/txtNoodlesPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="$130"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/txtRicePrice"
+        app:layout_constraintTop_toBottomOf="@+id/txtRicePrice" />
+
+    <TextView
+        android:id="@+id/txtPizzaPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="$110"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/txtNoodlesPrice"
+        app:layout_constraintTop_toBottomOf="@+id/txtNoodlesPrice" />
+
+    <TextView
+        android:id="@+id/txtColaPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="$50"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/txtPizzaPrice"
+        app:layout_constraintTop_toTopOf="@+id/radioGroup2" />
+
+    <TextView
+        android:id="@+id/txtSodaPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="$50"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/txtColaPrice"
+        app:layout_constraintTop_toBottomOf="@+id/txtColaPrice" />
+
+    <TextView
+        android:id="@+id/txtIcePrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+$60"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/chbIce"
+        app:layout_constraintStart_toStartOf="@+id/txtSodaPrice"
+        app:layout_constraintTop_toTopOf="@+id/chbIce" />
+
+    <TextView
+        android:id="@+id/txtCakePirce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+$80"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/chbCake"
+        app:layout_constraintStart_toStartOf="@+id/txtIcePrice"
+        app:layout_constraintTop_toTopOf="@+id/chbCake" />
+
+    <Button
+        android:id="@+id/btnConfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="確認"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtCakePirce"
+        app:layout_constraintStart_toStartOf="@+id/txtCakePirce"
+        app:layout_constraintTop_toBottomOf="@+id/txtCakePirce" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
